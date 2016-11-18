@@ -1,3 +1,9 @@
+public:
+  firewalld.bind:
+    - name: public
+    - interfaces:
+      - eth0
+
 {% if grains['host'] != 'web*' %}
 defaultpublic:
   firewalld.present:
