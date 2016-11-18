@@ -4,7 +4,7 @@ public:
     - interfaces:
       - eth0
 
-{% if grains['host'] != 'web*' %}
+{% if grains['host'] != 'web1' %}
 defaultpublic:
   firewalld.present:
     - name: public
