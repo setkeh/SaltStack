@@ -5,3 +5,4 @@ base:
     - config.defaultfirewall
   '*web*':
     - pkgs.webpkgs
+    - config.webconfig
