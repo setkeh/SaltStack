@@ -1,4 +1,4 @@
-install_network_packages:
+install_global_packages:
   pkg.installed:
     - pkgs:
       - vim
