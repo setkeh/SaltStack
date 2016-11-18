@@ -9,6 +9,7 @@ defaultpublic:
   firewalld.present:
     - name: public
     - default: true
+    - masquerade: False
     - ports:
       - 22/tcp
       - 4505/tcp
