@@ -5,3 +5,4 @@ install_global_packages:
       - net-tools
       - firewalld
       - git
+      - openssh
