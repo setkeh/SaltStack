@@ -1,7 +1,7 @@
 install_global_packages:
   pkg.installed:
     - pkgs:
-      - vim
+      - vim-enhanced
       - net-tools
       - firewalld
       - git
