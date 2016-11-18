@@ -1,7 +1,8 @@
 webpublic:
   firewalld.present:
     - name: public
-    - default: true
+    - default: True
+    - masquerade: False
     - ports:
       - 22/tcp
       - 4505/tcp
