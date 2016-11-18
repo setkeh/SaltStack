@@ -4,7 +4,6 @@ public:
     - interfaces:
       - eth0
 
-{% if grains['host'] != 'web1' %}
 defaultpublic:
   firewalld.present:
     - name: public
@@ -14,8 +13,7 @@ defaultpublic:
       - 22/tcp
       - 4505/tcp
       - 4506/tcp
-{% endif %}
 
-Make sure the mysql service is running:
+EnsureFirewalldRunning:
   service.running:
     - name: firewalld
