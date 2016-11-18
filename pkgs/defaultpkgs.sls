@@ -6,3 +6,8 @@ install_global_packages:
       - firewalld
       - git
       - openssh
+
+restartdefaultfirewall:
+  module.run:
+    - name: service.restart
+    - m_name: firewalld
