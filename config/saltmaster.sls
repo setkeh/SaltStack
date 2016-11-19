@@ -19,9 +19,3 @@ fileserver_backend:
 
 gitfs_remotes:
   - https://github.com/setkeh/SaltStack.git
-
-state file:
-  /srv/salt/:
-  file.recurse:
-    - env: develop
-    - source: salt:///
