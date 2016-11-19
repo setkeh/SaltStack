@@ -14,10 +14,6 @@ restartsaltmasterfirewall:
     - name: service.restart
     - m_name: firewalld
 
-GitPython:
-  pip.installed:
-    - name: 'GitPython < 2.0.9'
-
 fileserver_backend:
   - git
 

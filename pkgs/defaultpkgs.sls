@@ -7,7 +7,10 @@ install_global_packages:
       - git
       - openssh
       - wget
-      - python-pygit2
+
+GitPython:
+  pip.installed:
+    - name: 'GitPython < 2.0.9'
 
 restartdefaultfirewall:
   module.run:
