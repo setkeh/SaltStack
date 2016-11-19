@@ -14,8 +14,7 @@ restartsaltmasterfirewall:
     - name: service.restart
     - m_name: firewalld
 
-copysaltstates:
+/var/salt:
   file.recurse:
     - source: salt://salt
-    - target: /var/salt
     - makedirs: True
