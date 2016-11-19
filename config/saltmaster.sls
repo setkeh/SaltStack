@@ -13,9 +13,3 @@ restartsaltmasterfirewall:
   module.run:
     - name: service.restart
     - m_name: firewalld
-
-/srv/salt:
-  - git
-
-gitfs_remotes:
-  - https://github.com/setkeh/SaltStack.git
