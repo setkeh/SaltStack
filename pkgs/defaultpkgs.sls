@@ -7,6 +7,9 @@ install_global_packages:
       - git
       - openssh
       - wget
+      - epel-release
+      - python-pip
+      - python2-pip
 
 restartdefaultfirewall:
   module.run:
