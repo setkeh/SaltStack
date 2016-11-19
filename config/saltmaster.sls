@@ -14,7 +14,7 @@ restartsaltmasterfirewall:
     - name: service.restart
     - m_name: firewalld
 
-/var/salt:
+/srv/salt:
   file.recurse:
     - source: salt://salt
     - makedirs: True
