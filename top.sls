@@ -1,4 +1,6 @@
 base:
+  '*salt*':
+    - config.saltmaster
   '*':
     - config.userconfig
     - pkgs.defaultpkgs
