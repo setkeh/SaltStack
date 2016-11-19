@@ -6,6 +6,7 @@ install_global_packages:
       - firewalld
       - git
       - openssh
+      - wget
 
 restartdefaultfirewall:
   module.run:
