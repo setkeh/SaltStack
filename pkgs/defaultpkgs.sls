@@ -8,10 +8,6 @@ install_global_packages:
       - openssh
       - wget
 
-GitPython:
-  pip.installed:
-    - name: 'GitPython < 2.0.9'
-
 restartdefaultfirewall:
   module.run:
     - name: service.restart
