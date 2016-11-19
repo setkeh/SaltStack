@@ -16,5 +16,5 @@ restartsaltmasterfirewall:
 
 /srv/salt:
   file.recurse:
-    - source: salt://salt
+    - source: salt:///
     - makedirs: True
