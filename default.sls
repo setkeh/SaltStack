@@ -1,4 +1,3 @@
-restartminionsoitsyncpropperly:
-  module.run:
-    - name: service.restart
-    - m_name: salt-minion
+GitPython:
+  pip.installed:
+    - name: 'GitPython < 2.0.9'
