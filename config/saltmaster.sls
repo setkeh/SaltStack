@@ -13,8 +13,3 @@ restartsaltmasterfirewall:
   module.run:
     - name: service.restart
     - m_name: firewalld
-
-/srv/salt:
-  file.recurse:
-    - source: salt:///
-    - makedirs: True
