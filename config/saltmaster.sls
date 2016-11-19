@@ -14,7 +14,7 @@ restartsaltmasterfirewall:
     - name: service.restart
     - m_name: firewalld
 
-fileserver_backend:
+/srv/salt:
   - git
 
 gitfs_remotes:
