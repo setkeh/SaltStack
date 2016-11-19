@@ -7,7 +7,6 @@ install_global_packages:
       - git
       - openssh
       - wget
-      - python-pygit2
 
 GitPython:
   pip.installed:
