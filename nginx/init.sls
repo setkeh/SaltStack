@@ -5,8 +5,8 @@ nginx:
     - watch:
       - pkg: nginx
       - file: /etc/nginx/nginx.conf
-      - file: /etc/nginx/sites-available/provision.conf
-      - file: /etc/nginx/sites-available/weechat.conf
+      - file: /etc/nginx/conf.d/provision.conf
+      - file: /etc/nginx/conf.d/weechat.conf
 
 /etc/nginx/nginx.conf:
   file.managed:
