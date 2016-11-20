@@ -1,10 +1,11 @@
-forward:
-  - interface: eth0
-  - protocol: tcp
+iptables:
+  forward:
+    - interface: eth0
+    - protocol: tcp
 
-nat:
-  - interface: eth0
+    nat:
+      - interface: eth0
 
-tcp_ports:
-  - 4505
-  - 4506
+      tcp_ports:
+        - 4505
+        - 4506
