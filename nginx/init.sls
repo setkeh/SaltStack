@@ -7,6 +7,7 @@ nginx:
       - file: /etc/nginx/nginx.conf
       - file: /etc/nginx/conf.d/provision.conf
       - file: /etc/nginx/conf.d/weechat.conf
+      - file: /etc/nginx/conf.d/presentation.conf
 
 /etc/nginx/nginx.conf:
   file.managed:
@@ -25,6 +26,20 @@ nginx:
 /etc/nginx/conf.d/weechat.conf:
   file.managed:
     - source: salt://files/etc/nginx/conf.d/weechat.conf
+    - user: nginx
+    - group: nginx
+    - mode: 640
+
+/srv/www/html/presentation:
+  file.directory:
+    - user: nginx
+    - group: nginx
+    - dir_mode: 755
+    - file_mode: 644
+
+/var/www/html/presentation/index.html:
+  file.managed:
+    - source: salt://var/www/html/presentation/index.html
     - user: nginx
     - group: nginx
     - mode: 640
