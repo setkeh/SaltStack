@@ -21,13 +21,6 @@ pptpd:
     - group: root
     - mode: 640
 
-/etc/ppp/pptpd-options:
-  file.managed:
-    - source: salt://files/etc/ppp/pptpd-options
-    - user: root
-    - group: root
-    - mode: 640
-
 /etc/sysctl.conf:
   file.managed:
     - source: salt://files/etc/sysctl.conf
