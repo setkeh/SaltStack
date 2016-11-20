@@ -28,7 +28,7 @@ pptpd:
     - group: root
     - mode: 640
 
-/etc/ppp/sysctl.conf:
+/etc/sysctl.conf:
   file.managed:
     - source: salt://files/etc/sysctl.conf
     - user: root
