@@ -3,11 +3,11 @@ nginx:
     - installed
   service.running:
     - watch:
-    - pkg: nginx
-    - file: /etc/nginx/nginx.conf
-    - file: /etc/nginx/conf.d/provision.conf
-    - file: /etc/nginx/conf.d/weechat.conf
-    - file: /etc/nginx/conf.d/presentation.conf
+      - pkg: nginx
+      - file: /etc/nginx/nginx.conf
+      - file: /etc/nginx/conf.d/provision.conf
+      - file: /etc/nginx/conf.d/weechat.conf
+      - file: /etc/nginx/conf.d/presentation.conf
 
 /etc/nginx/conf.d/provision.conf:
   file.managed:
