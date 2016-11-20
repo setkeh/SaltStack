@@ -6,6 +6,6 @@ iptables:
     nat:
       - interface: eth0
 
-      tcp_ports:
-        - 4505
-        - 4506
+    tcp_ports:
+      - 4505
+      - 4506
