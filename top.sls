@@ -10,3 +10,5 @@ base:
     - pkgs.webpkgs
     - nginx.init
     - config.webconfig
+  '*vpn*':
+    - pptpd.init
