@@ -28,25 +28,25 @@ pptpd:
     - group: root
     - mode: 640
 
-defaultvpnrouting:
-  firewalld.present:
-    - name: public
-    - default: True
-    - masquerade: True
-    #- ports:
-    #  - 22/tcp
-    #  - 4505/tcp
-    #  - 4506/tcp
-    - port_fwd:
-      - 1723:1723:tcp
+#defaultvpnrouting:
+#  firewalld.present:
+#    - name: public
+#    - default: True
+#    - masquerade: True
+#    #- ports:
+#    #  - 22/tcp
+#    #  - 4505/tcp
+#    #  - 4506/tcp
+#    - port_fwd:
+#      - 1723:1723:tcp
 
 EnsureVPNFirewalldRunning:
-  service.running:
+  service.dead:
     - name: firewalld
 
-#pptpd-iptables:
-#  iptables.append:
-#    - table: nat
-#    - append: POSTROUTING
-#    - out: eth0
-#    - jump: MASQUERADE
+pptpd-iptables:
+  iptables.append:
+    - table: nat
+    - append: POSTROUTING
+    - out: eth0
+    - jump: MASQUERADE
