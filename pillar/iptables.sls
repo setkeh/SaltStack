@@ -1,5 +1,3 @@
-ssh: True
-
 forward:
   - interface: eth0
   - protocol: tcp
