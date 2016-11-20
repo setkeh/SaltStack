@@ -6,6 +6,7 @@ base:
     - pkgs.defaultpkgs
     - config.defaultfirewall
     - default
+    - iptables.iptables
   '*web*':
     - pkgs.webpkgs
     - nginx.init
