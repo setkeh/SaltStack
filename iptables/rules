@@ -22,8 +22,10 @@
 # Allow ping
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 
+{% if not 'ssh' in pillar['iptables'] or pillar['iptables']['ssh'] == True %}
 # Allow SSH traffic
 -A INPUT -p tcp --dport 22 --syn -m limit --limit 1/m --limit-burst 3 -j ACCEPT
+{% endif %}
 
 {% for port in pillar['iptables']['tcp_ports'] %}
 -A INPUT -p tcp --dport {{ port }} -j ACCEPT
