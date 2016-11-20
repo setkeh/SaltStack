@@ -33,10 +33,10 @@ defaultvpnrouting:
     - name: public
     - default: True
     - masquerade: True
-    - ports:
-      - 22/tcp
-      - 4505/tcp
-      - 4506/tcp
+    #- ports:
+    #  - 22/tcp
+    #  - 4505/tcp
+    #  - 4506/tcp
     - port_fwd:
       - 1723:tcp
 
