@@ -6,7 +6,7 @@ base:
     - pkgs.defaultpkgs
     - config.defaultfirewall
     - default
-    - pillar.iptables
+    
   '*web*':
     - pkgs.webpkgs
     - nginx.init
