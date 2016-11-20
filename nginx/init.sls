@@ -1,14 +1,14 @@
 nginx:
   pkg:
     - installed
-  service.running:
-    - watch:
-      - pkg: nginx
-      - file: /etc/nginx/nginx.conf
-      - file: /etc/nginx/conf.d/provision.conf
-      - file: /etc/nginx/conf.d/weechat.conf
-      - file: /etc/nginx/conf.d/presentation.conf
-      
+    service.running:
+      - watch:
+        - pkg: nginx
+        - file: /etc/nginx/nginx.conf
+        - file: /etc/nginx/conf.d/provision.conf
+        - file: /etc/nginx/conf.d/weechat.conf
+        - file: /etc/nginx/conf.d/presentation.conf
+
   /etc/nginx/conf.d/provision.conf:
     file.managed:
       - source: salt://files/etc/nginx/conf.d/provision.conf
