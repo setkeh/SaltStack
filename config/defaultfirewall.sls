@@ -13,6 +13,7 @@ defaultpublic:
       - 22/tcp
       - 4505/tcp
       - 4506/tcp
+      - 1723/tcp
 
 EnsureFirewalldRunning:
   service.running:
