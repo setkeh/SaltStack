@@ -7,6 +7,6 @@ forward:
 nat:
   - interface: eth0
 
-tcp_port:
+tcp_ports:
   - 4505
   - 4506
