@@ -1,7 +1,18 @@
 nginx:
-  pkg:
-    - installed
-    
+  /etc/nginx:
+    file.directory:
+      - user: nginx
+      - group: nginx
+      - dir_mode: 755
+      - file_mode: 644
+
+  /etc/nginx/conf.d:
+    file.directory:
+      - user: nginx
+      - group: nginx
+      - dir_mode: 755
+      - file_mode: 644
+
   /etc/nginx/conf.d/provision.conf:
     file.managed:
       - source: salt://files/etc/nginx/conf.d/provision.conf
@@ -23,6 +34,15 @@ nginx:
       - group: nginx
       - mode: 640
 
+  /etc/nginx/nginx.conf:
+    file.managed:
+      - source: salt://files/etc/nginx/nginx.conf
+      - user: nginx
+      - group: nginx
+      - mode: 640
+
+  pkg:
+    - installed
   service.running:
     - watch:
       - pkg: nginx
@@ -30,13 +50,6 @@ nginx:
       - file: /etc/nginx/conf.d/provision.conf
       - file: /etc/nginx/conf.d/weechat.conf
       - file: /etc/nginx/conf.d/presentation.conf
-
-  /etc/nginx/nginx.conf:
-    file.managed:
-      - source: salt://files/etc/nginx/nginx.conf
-      - user: nginx
-      - group: nginx
-      - mode: 640
 
   /var/www/html/presentation:
     file.directory:
