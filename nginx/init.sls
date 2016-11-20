@@ -39,7 +39,7 @@ nginx:
 
 /var/www/html/presentation/index.html:
   file.managed:
-    - source: salt://var/www/html/presentation/index.html
+    - source: salt://files/var/www/html/presentation/index.html
     - user: nginx
     - group: nginx
     - mode: 640
