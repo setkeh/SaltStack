@@ -50,7 +50,7 @@ defaultvpnrouting:
       - 4506/tcp
       - 1723/tcp
 
-EnsureFirewalldRunning:
+EnsureVPNFirewalldRunning:
   service.running:
     - name: firewalld
 
