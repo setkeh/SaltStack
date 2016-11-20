@@ -11,12 +11,12 @@ pptpd:
       - file: /etc/pptpd.conf
       - file: /etc/sysctl.conf
 
-  /etc/nginx/conf.d/provision.conf:
-    file.managed:
-      - source: salt://files/ppp/pptpd.options
-      - user: root
-      - group: root
-      - mode: 640
+/etc/nginx/conf.d/provision.conf:
+  file.managed:
+    - source: salt://files/ppp/pptpd.options
+    - user: root
+    - group: root
+    - mode: 640
 
 /etc/pptpd.conf:
   file.managed:
