@@ -30,7 +30,7 @@ nginx:
     - group: nginx
     - mode: 640
 
-/srv/www/html/presentation:
+/var/www/html/presentation:
   file.directory:
     - user: nginx
     - group: nginx
