@@ -13,3 +13,8 @@ restartwebfirewall:
   module.run:
     - name: service.restart
     - m_name: firewalld
+
+restartwebserver:
+  module.run:
+    - name: service.restart
+    - m_name: nginx

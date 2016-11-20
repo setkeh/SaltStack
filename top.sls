@@ -8,4 +8,5 @@ base:
     - default
   '*web*':
     - pkgs.webpkgs
+    - nginx.init
     - config.webconfig
