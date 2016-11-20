@@ -47,7 +47,7 @@ EnsureVPNFirewalldRunning:
 pptpd-iptables:
   iptables.append:
     - chain: FORWARD
-    - t: nat
-    - A: POSTROUTING
-    - o: eth0
-    - j: MASQUERADE
+    - table: nat
+    - append: POSTROUTING
+    - out-interface: eth0
+    - jump: MASQUERADE
