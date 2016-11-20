@@ -56,4 +56,4 @@ iptables:
     - watch:
       - file: iptables
     - require:
-- pkg: iptables
+      - pkg: iptables
