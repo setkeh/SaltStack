@@ -9,7 +9,7 @@ pptpd:
 
 /etc/ppp/pptpd.options:
   file.managed:
-    - source: salt://files/etc/ppp/pptpd.options
+    - source: salt://files/etc/ppp/pptpd-options
     - user: root
     - group: root
     - mode: 640
