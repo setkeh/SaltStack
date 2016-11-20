@@ -37,6 +37,7 @@ defaultvpnrouting:
       - 22/tcp
       - 4505/tcp
       - 4506/tcp
+    - port_fwd:
       - 1723/tcp
 
 EnsureVPNFirewalldRunning:
