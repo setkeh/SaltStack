@@ -44,10 +44,16 @@ EnsureVPNFirewalldRunning:
   service.dead:
     - name: firewalld
 
-pptpd-iptables:
-  iptables.append:
-    - chain: FORWARD
-    - table: nat
-    - append: POSTROUTING
-    - out-interface: eth0
-    - jump: MASQUERADE
+iptables:
+  pkg:
+    - installed
+  file.managed:
+    - name: /etc/iptables.rules
+    - source: salt://iptables/rules
+    - template: jinja
+  cmd.wait:
+    - name: iptables-restore < /etc/iptables.rules
+    - watch:
+      - file: iptables
+    - require:
+- pkg: iptables
