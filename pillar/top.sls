@@ -1,4 +1,3 @@
 base:
   '*':
-    - default
-    - VPNiptables
+    - init

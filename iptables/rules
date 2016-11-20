@@ -25,13 +25,13 @@
 # Allow SSH traffic
 -A INPUT -p tcp --dport 22 --syn -m limit --limit 1/m --limit-burst 3 -j ACCEPT
 
-{% for port in pillar['tcp_ports'] %}
+{% for port in pillar['iptables']['tcp_ports'] %}
 -A INPUT -p tcp --dport {{ port }} -j ACCEPT
 {% endfor %}
 
 {% if pillar['iptables']['forward'] %}
--A INPUT -i {{ pillar['forward']['interface'] }} -j ACCEPT
--A INPUT -p {{ pillar['forward']['protocol'] }} -j ACCEPT
+-A INPUT -i {{ pillar['iptables']['forward']['interface'] }} -j ACCEPT
+-A INPUT -p {{ pillar['iptables']['forward']['protocol'] }} -j ACCEPT
 {% endif %}
 
 # Everything else is forbidden
@@ -39,9 +39,9 @@
 
 COMMIT
 
-{% if pillar['nat'] %}
+{% if pillar['iptables']['nat'] %}
 *nat
-{% for interface in pillar['nat'] %}
+{% for interface in pillar['iptables']['nat'] %}
 -A POSTROUTING -o {{ interface }} -j MASQUERADE
 {% endfor %}
 COMMIT
