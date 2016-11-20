@@ -1,4 +1,4 @@
 base:
   '*':
     - default
-    - iptables
+    - VPNiptables
