@@ -1,7 +1,3 @@
-http://poptop.sourceforge.net/yum/stable/rhel6/pptp-release-current.noarch.rpm:
-  pkg:
-    - installed
-
 pptpd:
   pkg:
     - installed
@@ -11,9 +7,9 @@ pptpd:
       - file: /etc/pptpd.conf
       - file: /etc/sysctl.conf
 
-/etc/nginx/conf.d/provision.conf:
+/etc/ppp/pptpd.options:
   file.managed:
-    - source: salt://files/ppp/pptpd.options
+    - source: salt://files/etc/ppp/pptpd.options
     - user: root
     - group: root
     - mode: 640
