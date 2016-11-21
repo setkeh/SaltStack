@@ -9,7 +9,7 @@ install_global_packages:
       - wget
       - epel-release
       - python-pip
-      - pyinotify
+      - python-inotify.noarch
 
 restartdefaultfirewall:
   module.run:
