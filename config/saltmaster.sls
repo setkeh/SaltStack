@@ -1,3 +1,10 @@
+/etc/salt/master:
+  file.managed:
+    - source: salt://files/etc/salt/master
+    - user: root
+    - group: root
+    - mode: 640
+    
 saltmasterpublic:
   firewalld.present:
     - name: public

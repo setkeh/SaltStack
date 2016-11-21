@@ -9,6 +9,7 @@ install_global_packages:
       - wget
       - epel-release
       - python-pip
+      - python-pyinotify
 
 restartdefaultfirewall:
   module.run:
