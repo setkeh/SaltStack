@@ -25,10 +25,6 @@ salt-master:
   service.running:
     - enable: True
 
-salt-minion:
-  service.running:
-    - enable: True
-
 salt-api:
   service.running:
     - enable: True
