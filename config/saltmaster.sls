@@ -4,7 +4,7 @@
     - user: root
     - group: root
     - mode: 640
-    
+
 saltmasterpublic:
   firewalld.present:
     - name: public
@@ -20,3 +20,15 @@ restartsaltmasterfirewall:
   module.run:
     - name: service.restart
     - m_name: firewalld
+
+salt-master:
+  service.running:
+    - enable: True
+
+salt-minion:
+  service.running:
+    - enable: True
+
+salt-api:
+  service.running:
+    - enable: True

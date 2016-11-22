@@ -8,3 +8,7 @@ GitPython:
     - user: root
     - group: root
     - mode: 640
+
+salt-minion:
+  service.running:
+    - enable: True
