@@ -5,6 +5,13 @@
     - group: root
     - mode: 640
 
+/etc/salt/master.d/salt-api.conf:
+  file.managed:
+    - source: salt://files/etc/salt/master.d/salt-api.conf
+    - user: root
+    - group: root
+    - mode: 640
+
 saltmasterpublic:
   firewalld.present:
     - name: public
