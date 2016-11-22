@@ -37,6 +37,15 @@ nginx:
     - group: nginx
     - mode: 640
 
+/var/www:
+  file.directory:
+    - user: nginx
+    - group: nginx
+    - dir_mode: 755
+    - file_mode: 644
+    - recurse:
+      - html
+
 /var/www/html/presentation:
   file.directory:
     - user: nginx
